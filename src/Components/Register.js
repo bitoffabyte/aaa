@@ -1,8 +1,20 @@
 import React, { useRef, useState, useEffect } from "react";
 import { email as mail } from "../firebase-codes";
+import firebase from "firebase";
+import { useHistory } from "react-router-dom";
+import { checkIfExists } from "./Checks";
 
 import "./Register.css";
 const Register = () => {
+	let [y, uY] = useState(true);
+	const history = useHistory();
+	if (firebase.auth().currentUser) {
+		history.push("/signin");
+	}
+	if (firebase.auth().currentUser)
+		if (checkIfExists(firebase.auth().currentUser.email)) {
+			uY(false);
+		}
 	const phno = useRef();
 	const reg = useRef();
 	const rea = useRef();
@@ -59,70 +71,75 @@ const Register = () => {
 				reason,
 			};
 			console.log("post", det);
+			// post req
 		}
 	};
-	return (
+	return !y ? (
+		<>hello</>
+	) : (
 		<div styld={{ width: "100vw", height: "100vh" }}>
 			<div className='reg'>
-				<span className='head1'>One last step..</span>
-				<br />
-				<span className='head2'>Fill the details carefully</span>
-				<br />
-				<br />
+				<div className='abc'>
+					<span className='head1'>One last step..</span>
+					<br />
+					<span className='head2'>Fill the details carefully</span>
+					<br />
+					<br />
 
-				<form onSubmit={submitHandler}>
-					<label className='formLabel'>Phone Number</label>
-					<span className='ermsg'>
-						{!phck ? "Enter a valid Phone Number" : ""}
-					</span>
+					<form onSubmit={submitHandler}>
+						<label className='formLabel'>Phone Number</label>
+						<span className='ermsg'>
+							{!phck ? "Enter a valid Phone Number" : ""}
+						</span>
 
-					<br />
-					<input
-						type='tel'
-						className={`${phck ? "input1" : "input1 er"}`}
-						placeholder='Phone Number'
-						ref={phno}
-						name='phone'
-					/>
-					<br />
-					<br />
-					<label className='formLabel'>Registration Number</label>
-					<span className='ermsg'>
-						{!rgck ? "Enter a valid Registration Number" : ""}
-					</span>
-					<br />
-					<input
-						type='text'
-						className={`${rgck ? "input1" : "input1 er"}`}
-						placeholder='Registration Number'
-						ref={reg}
-						name='regno'
-						style={{ textTransform: "uppercase" }}
-					/>
+						<br />
+						<input
+							type='tel'
+							className={`${phck ? "input1" : "input1 er"}`}
+							placeholder='Phone Number'
+							ref={phno}
+							name='phone'
+						/>
+						<br />
+						<br />
+						<label className='formLabel'>Registration Number</label>
+						<span className='ermsg'>
+							{!rgck ? "Enter a valid Registration Number" : ""}
+						</span>
+						<br />
+						<input
+							type='text'
+							className={`${rgck ? "input1" : "input1 er"}`}
+							placeholder='Registration Number'
+							ref={reg}
+							name='regno'
+							style={{ textTransform: "uppercase" }}
+						/>
 
-					<br />
-					<br />
-					<label className='formLabel'>
-						Why do you want to join RoboVITics?
-					</label>
-					<span className='ermsg'>
-						{!reck ? "Please keep it 100 - 200 words" : ""}
-					</span>
-					<br />
-					<textarea
-						type='text'
-						className={`${reck ? "input3" : "input3 er"}`}
-						placeholder='Answer in 100-200 words'
-						ref={rea}
-						name='reason'
-					/>
+						<br />
+						<br />
+						<label className='formLabel'>
+							Why do you want to join RoboVITics?
+						</label>
+						<span className='ermsg'>
+							{!reck ? "Please keep it 100 - 200 words" : ""}
+						</span>
+						<br />
+						<textarea
+							type='text'
+							className={`${reck ? "input3" : "input3 er"}`}
+							placeholder='Answer in 100-200 words'
+							ref={rea}
+							name='reason'
+						/>
 
-					<br />
-					<br />
-					<button type='submit' className='subBtn'>
-						Submit
-					</button>
-				</form>
+						<br />
+						<br />
+						<button type='submit' className='subBtn'>
+							Submit
+						</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	);

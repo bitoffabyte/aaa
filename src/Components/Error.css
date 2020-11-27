@@ -1,0 +1,25 @@
+.er {
+	width: 995px;
+	height: 104px;
+	text-align: left;
+	font: normal normal 600 88px/104px Raleway;
+	letter-spacing: 0px;
+	color: #f8b652;
+	opacity: 1;
+}
+.err {
+	width: 694px;
+	height: 41px;
+	text-align: center;
+	font: normal normal 300 35px/41px Raleway;
+	letter-spacing: 0.88px;
+	color: #f8b652;
+}
+.errr {
+	width: 269px;
+	height: 41px;
+	text-align: center;
+	font: italic normal 300 35px/41px Raleway;
+	letter-spacing: 0.88px;
+	color: #f8b652;
+}
