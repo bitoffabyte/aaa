@@ -1,0 +1,129 @@
+.landingLogo {
+	margin: auto;
+	text-align: center;
+	margin-top: -5%;
+	width: 884px;
+	height: 498px;
+	transition: all 800;
+	transition: margin 600ms;
+}
+.wel {
+	margin-top: 10%;
+	text-align: center;
+	font: normal normal 600 116px/136px Raleway;
+	letter-spacing: 4.64px;
+	color: #2560a1;
+	opacity: 1;
+}
+.to {
+	text-align: center;
+	font: italic normal 300 52px/61px Raleway;
+	letter-spacing: 0px;
+	color: #2560a1;
+	opacity: 1;
+}
+.ccs {
+	text-align: center;
+	font: normal normal 500 88px/104px Raleway;
+	letter-spacing: 0px;
+	color: #2560a1;
+	opacity: 1;
+}
+
+.dib {
+	margin-top: 10%;
+	margin-bottom: 0;
+}
+
+.play {
+	margin-top: -10%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.logo2 {
+	margin-top: 10%;
+	transition: margin 600ms;
+}
+.logoGone {
+	transition: all 800ms;
+	opacity: 0;
+	visibility: none;
+	display: none;
+}
+@media only screen and (max-width: 1000px) {
+	.landingLogo {
+		transform: scale(0.8);
+	}
+}
+@media only screen and (max-width: 800px) {
+	.dib {
+		text-align: center;
+	}
+	.landingLogo {
+		width: 100%;
+		height: auto;
+		transform: scale(1.01);
+	}
+	.wel {
+		margin-top: 10%;
+		text-align: center;
+		font: normal normal 400 116px/136px Raleway;
+		letter-spacing: 4.64px;
+		color: #2560a1;
+		font-size: 15vw;
+		opacity: 1;
+	}
+	.to {
+		text-align: center;
+		font: italic normal 100 52px/61px Raleway;
+		letter-spacing: 0px;
+		color: #2560a1;
+		opacity: 1;
+	}
+	.ccs {
+		text-align: center;
+		font: normal normal 300 88px/104px Raleway;
+		letter-spacing: 0px;
+		color: #2560a1;
+		font-size: 15vw;
+		opacity: 1;
+	}
+}
+
+/* Animations */
+
+.my-node-enter {
+	opacity: 0;
+	transform: translateY(-500px);
+}
+.my-node-enter-active {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 800ms;
+}
+.my-node-exit {
+	opacity: 1;
+	transform: translateY(0px);
+}
+.my-node-exit-active {
+	opacity: 0;
+	transform: translateY(-500px);
+	transition: all 800ms;
+}
+
+.logoAni-enter {
+	transform: translateY(-420px);
+}
+.logoAni-enter-active {
+	transform: translateY(0px);
+	transition: all 800ms;
+}
+.logoAni-exit {
+	transform: translateY(0px);
+}
+.logoAni-exit-active {
+	transform: translateY(-420px);
+
+	transition: all 800ms;
+}

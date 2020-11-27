@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Landing from "./Components/Landing";
+import Signin from "./Components/Signin";
+import Register from "./Components/Register";
+import Quiz from "./Components/Quiz";
+import { initialize } from "./firebase-codes";
+import { BrowserRouter as Router, Route, useHistory } from "react-router-dom";
+initialize();
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const history = useHistory();
+	return (
+		<Router className='App'>
+			<Route path='/' exact>
+				{({ match }) => <Landing a={match != null} />}
+			</Route>
+			<Route path='/signin' exact>
+				{({ match }) => <Signin match={match} />}
+			</Route>
+			<Route path='/quiz'>
+				<Quiz />
+			</Route>
+			<Route path='/register'>
+				<Register />
+			</Route>
+		</Router>
+	);
 }
 
 export default App;

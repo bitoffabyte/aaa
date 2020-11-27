@@ -1,0 +1,37 @@
+.googleImg {
+	width: 382px;
+	height: 92px;
+	opacity: 1;
+	margin-top: -10%;
+	cursor: pointer;
+}
+.vitE {
+	top: 693px;
+	left: 701px;
+	width: 518px;
+	height: 41px;
+	text-align: center;
+	font: normal normal 300 35px/41px Raleway;
+	letter-spacing: 0.88px;
+	color: #2560a1;
+	opacity: 1;
+}
+
+.signIn-enter {
+	transform: translateY(500px);
+	opacity: 0;
+}
+.signIn-enter-active {
+	opacity: 1;
+	transform: translateY(0px);
+	transition: all 1300ms;
+}
+.signIn-exit {
+	transform: translateY(0px);
+	opacity: 1;
+}
+.signIn-exit-active {
+	transform: translateY(500px);
+	opacity: 0;
+	transition: all 1300ms;
+}
