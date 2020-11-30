@@ -7,15 +7,14 @@ import { checkIfExists } from "./Checks";
 
 import "./Register.css";
 const Register = () => {
-	let [y, uY] = useState(true);
 	const history = useHistory();
 	if (firebase.auth().currentUser) {
-		history.push("/signin");
+		// history.push("/signin");
 	}
 	if (firebase.auth().currentUser)
 		if (checkIfExists(firebase.auth().currentUser.email)) {
-			uY(false);
 		}
+	console.log("sdfgijabg");
 	const phno = useRef();
 	const reg = useRef();
 	const rea = useRef();
@@ -72,13 +71,13 @@ const Register = () => {
 				reason,
 			};
 			console.log("post", det);
-			$.post('http://127.0.0.1:5000/register',det,(data,err) => {console.log(data)})
+			$.post("http://127.0.0.1:5000/register", det, (data, err) => {
+				console.log(data);
+			});
 			// post req
 		}
 	};
-	return !y ? (
-		<>hello</>
-	) : (
+	return (
 		<div styld={{ width: "100vw", height: "100vh" }}>
 			<div className='reg'>
 				<div className='abc'>

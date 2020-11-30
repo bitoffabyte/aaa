@@ -5,27 +5,21 @@ import img from "../assets/robovitics.png";
 import { checkIfExists } from "./Checks";
 import img2 from "../assets/google.png";
 import { useHistory } from "react-router-dom";
+import { Redir } from "./Redir";
 // import { CSSTransition } from "react-transition-group";
 import { signIn } from "../firebase-codes";
 const Signin = () => {
 	const history = useHistory();
 	const [auth, updateAuth] = useState(false);
 	if (auth && history.location.pathname === "/signin") {
-		if (firebase.auth().currentUser.email) {
-			if (!checkIfExists(firebase.auth().currentUser.email)) {
-				history.push("/register");
-			} else {
-				history.push("/error");
-			}
-		}
+		Redir();
 	}
-	if (auth) {
-		console.log("lol");
-	}
+	console.log(auth);
 	useEffect(() => {
-		firebase.auth().onAuthStateChanged((user) => {
+		const uns = firebase.auth().onAuthStateChanged((user) => {
 			updateAuth(!!user);
 		});
+		return () => uns();
 	}, []);
 	return (
 		// <CSSTransition
