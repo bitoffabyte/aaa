@@ -1,96 +1,52 @@
 .landingLogo {
 	margin: auto;
 	text-align: center;
-	margin-top: -5%;
-	width: 884px;
-	height: 498px;
+	margin-top: -9%;
+	margin-bottom: -5%;
+	width: 70vw;
+	height: auto;
 	transition: all 800;
 	transition: margin 600ms;
 }
-.wel {
-	margin-top: 10%;
-	text-align: center;
-	font: normal normal 600 116px/136px Raleway;
-	letter-spacing: 4.64px;
-	color: #2560a1;
-	opacity: 1;
-}
-.to {
-	text-align: center;
-	font: italic normal 300 52px/61px Raleway;
-	letter-spacing: 0px;
-	color: #2560a1;
-	opacity: 1;
-}
 .ccs {
+	width: 40vw;
 	text-align: center;
 	font: normal normal 500 88px/104px Raleway;
 	letter-spacing: 0px;
-	color: #2560a1;
+	color: #f8b652;
 	opacity: 1;
 }
 
 .dib {
-	margin-top: 10%;
-	margin-bottom: 0;
+	width: 80vw;
+	margin: auto;
 }
-
+.asd {
+	width: 100vw;
+	text-align: center;
+	padding-top: 13%;
+}
 .play {
 	margin-top: -10%;
 	z-index: 10;
 	cursor: pointer;
 }
 
-.logo2 {
-	margin-top: 10%;
-	transition: margin 600ms;
-}
-.logoGone {
-	transition: all 800ms;
-	opacity: 0;
-	visibility: none;
-	display: none;
-}
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1500px) {
 	.landingLogo {
-		transform: scale(0.8);
+		width: 90vw;
 	}
 }
-@media only screen and (max-width: 800px) {
-	.dib {
-		text-align: center;
-	}
-	.landingLogo {
-		width: 100%;
-		height: auto;
-		transform: scale(1.01);
-	}
-	.wel {
-		margin-top: 10%;
-		text-align: center;
-		font: normal normal 400 116px/136px Raleway;
-		letter-spacing: 4.64px;
-		color: #2560a1;
-		font-size: 15vw;
-		opacity: 1;
-	}
-	.to {
-		text-align: center;
-		font: italic normal 100 52px/61px Raleway;
-		letter-spacing: 0px;
-		color: #2560a1;
-		opacity: 1;
-	}
+@media only screen and (max-width: 700px) {
 	.ccs {
+		width: 80vw;
 		text-align: center;
-		font: normal normal 300 88px/104px Raleway;
-		letter-spacing: 0px;
-		color: #2560a1;
-		font-size: 15vw;
-		opacity: 1;
+		font: normal normal 500 50px Raleway;
+	}
+	.asd {
+		padding-top: 20vh;
 	}
 }
-
 /* Animations */
 
 .my-node-enter {
