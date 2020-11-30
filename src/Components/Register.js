@@ -77,6 +77,8 @@ const Register = () => {
 			// post req
 		}
 	};
+	// firebase.auth().signOut();
+
 	return (
 		<div styld={{ width: "100vw", height: "100vh" }}>
 			<div className='reg'>
