@@ -12,7 +12,7 @@ const Error = () => {
 		>
 			<img src={img}></img>
 			<div>
-				<span className='er'>Error</span>
+				<span className='eer'>Error</span>
 				<br />
 				<span className='err'>
 					Please sign in with VIT email ID ending in
