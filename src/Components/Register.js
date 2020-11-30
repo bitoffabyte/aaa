@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { email as mail } from "../firebase-codes";
+import $ from "jquery";
 
 import "./Register.css";
 const Register = () => {
@@ -59,6 +60,7 @@ const Register = () => {
 				reason,
 			};
 			console.log("post", det);
+			$.post('http://127.0.0.1:5000/register',det,(data,err) => {console.log(data)})
 		}
 	};
 	return (
