@@ -1,17 +1,15 @@
 import React from "react";
 import img from "../assets/err.svg";
 import "./Styles/Comp.css";
-const Error = () => {
+const Error = ({ a, b }) => {
 	return (
 		<div className='laaa'>
 			<div className='laad'>
 				<img src={img} className='iiimg' />
 				<div style={{ textAlign: "left" }}>
-					<span className='rc'>Error</span>
+					<span className='rc'>{a}</span>
 					<br />
-					<span className='ffd'>
-						For further details, please check your email.
-					</span>
+					<span className='ffd'>{b}</span>
 				</div>
 			</div>
 		</div>

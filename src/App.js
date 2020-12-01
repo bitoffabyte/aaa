@@ -31,14 +31,17 @@ function App() {
 						<Register />
 					</Route>
 					<Route path='/error'>
-						<Error />
+						<Error
+							a='Error'
+							b='Please sign in with VIT email ID ending in @vitstudent.ac.in'
+						/>
 					</Route>
 					<Route path='/done'>
 						<Complete />
 					</Route>
-					{/* <Route>
-						<Error a= '404 Page Not Found' b = ''
-					</Route> */}
+					<Route>
+						<Error a='404' b=' Page Not Found'></Error>
+					</Route>
 				</Switch>
 			</div>
 		</Router>
