@@ -17,16 +17,15 @@ initialize();
 function App() {
 	return (
 		<Router className='App'>
-			<Logo />
 			<div style={{ zIndex: 10 }}>
 				<Switch>
 					<Route path='/' exact key='path'>
-						{({ match }) => {
-							return <Landing match={match != null} />;
-						}}
+						<Landing />
+						<Logo />
 					</Route>
 					<Route path='/signin' exact>
 						<Signin />
+						<Logo />
 					</Route>
 					<Route path='/register'>
 						<Register />
@@ -37,6 +36,9 @@ function App() {
 					<Route path='/done'>
 						<Complete />
 					</Route>
+					{/* <Route>
+						<Error a= '404 Page Not Found' b = ''
+					</Route> */}
 				</Switch>
 			</div>
 		</Router>

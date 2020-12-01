@@ -2,18 +2,13 @@ import img from "../assets/robovitics.png";
 import "./Styles/Logo.css";
 import { useHistory } from "react-router-dom";
 const Logo = () => {
+	const a = { display: "none" };
+	const b = { display: "block" };
 	const history = useHistory();
 	return (
 		<div>
 			<img
-				style={{
-					opacity: `${
-						history.location.pathname === "/signin" ||
-						history.location.pathname === "/"
-							? 1
-							: 0
-					} `,
-				}}
+				// style={}
 				src={img}
 				className='logo'
 			/>

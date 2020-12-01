@@ -8,7 +8,7 @@ import { CSSTransition } from "react-transition-group";
 import { useHistory } from "react-router-dom";
 import { Route } from "react-router-dom";
 
-const Landing = ({ match }) => {
+const Landing = () => {
 	const history = useHistory();
 	const [a, ua] = useState(false);
 	useEffect(() => {
