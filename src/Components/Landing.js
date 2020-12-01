@@ -41,7 +41,12 @@ const Landing = () => {
 				{/* </CSSTransition> */}
 
 				<br />
-				<CSSTransition in={true} timeout={800} unmountOnExit>
+				<CSSTransition
+					in={true}
+					timeout={800}
+					unmountOnExit
+					classNames='my-node'
+				>
 					<img
 						src={img2}
 						className='play'
