@@ -3,24 +3,46 @@ import { email as mail } from "../firebase-codes";
 import $ from "jquery";
 import firebase from "firebase";
 import { useHistory } from "react-router-dom";
-import { checkIfExists } from "./Checks";
-
+import { checkIfExists, chkUser } from "./Checks";
+import Complete from "./Complete";
 import "./Styles/Register.css";
 const Register = () => {
 	const history = useHistory();
-	if (firebase.auth().currentUser) {
-		// history.push("/signin");
-	}
-	if (firebase.auth().currentUser)
-		if (checkIfExists(firebase.auth().currentUser.email)) {
-		}
-	console.log("sdfgijabg");
 	const phno = useRef();
 	const reg = useRef();
 	const rea = useRef();
 	const [phck, updatePhck] = useState(true);
 	const [rgck, updatergck] = useState(true);
 	const [reck, updatereck] = useState(true);
+	const [suc, updateSuc] = useState(true);
+	// This is initiall false to see reg form make it false until backend is done
+	// once backend is done add useState(false)
+
+	useEffect(() => {
+		// console.log(!!firebase.auth().currentUser, "asdasd");
+
+		const uns = firebase.auth().onAuthStateChanged((user) => {
+			console.log(!!user);
+			if (!user) {
+				history.push("/signin");
+			} else if (chkUser(user.email)) {
+				chkUser(true);
+			}
+		});
+		return () => uns();
+
+		// try {
+		// 	const user = await firebase.auth().currentUser;
+		// 	console.log(user, "asdasdasdasd");
+
+		// 	if (!user) {
+		// 		history.push("/");
+		// 	} else if (suc != chkUser(user.email))
+		// 		updateSuc(chkUser(user.email));
+		// } catch (err) {
+		// 	console.log(err);
+		// }
+	}, []);
 	const submitHandler = async (e) => {
 		e.preventDefault();
 		if (
@@ -75,11 +97,13 @@ const Register = () => {
 				console.log(data);
 			});
 			// post req
+			// once a 200 res is recieved
+			// updateSuc(true);
 		}
 	};
 	// firebase.auth().signOut();
 
-	return (
+	return !suc ? (
 		<div styld={{ width: "100vw", height: "100vh" }}>
 			<div className='reg'>
 				<div className='abc'>
@@ -145,6 +169,8 @@ const Register = () => {
 				</div>
 			</div>
 		</div>
+	) : (
+		<Complete />
 	);
 };
 

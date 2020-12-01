@@ -8,3 +8,8 @@ export const checkIfExists = async (email) => {
 		return null;
 	}
 };
+
+export const chkUser = (email) => {
+	// check if user exists and then return true/false
+	return true;
+};

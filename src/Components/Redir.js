@@ -14,21 +14,3 @@ export const Redir = () => {
 		firebase.auth().signOut();
 	}
 };
-/*
-export const Redir = () => {
-	const history = useHistory();
-	if (!firebase.auth().currentUser.email.includes("2019@vitstudent.ac.in")) {
-		firebase.auth().signOut();
-		console.log(firebase.auth().currentUser.email);
-		history.push("/error");
-	} else {
-		// Api call to check if user exists
-		// if (!checkIfExists(firebase.auth().currentUser.email)) {
-		// 	history.push("/register");
-		// } else {
-		// 	history.push("/error");
-		// }
-		history.push("/register");
-	}
-};
-*/

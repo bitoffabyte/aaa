@@ -14,7 +14,6 @@ const Signin = () => {
 	if (auth && history.location.pathname === "/signin") {
 		Redir();
 	}
-
 	useEffect(() => {
 		const uns = firebase.auth().onAuthStateChanged((user) => {
 			updateAuth(!!user);
