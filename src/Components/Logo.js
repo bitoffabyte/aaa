@@ -4,14 +4,14 @@ import { useHistory } from "react-router-dom";
 const Logo = () => {
 	const history = useHistory();
 	return (
-		<div style={{ zIndex: "0", heigh: "100vh", width: "100vw" }}>
+		<div>
 			<img
 				style={{
 					opacity: `${
 						history.location.pathname === "/signin" ||
 						history.location.pathname === "/"
 							? 1
-							: 0.3
+							: 0
 					} `,
 				}}
 				src={img}

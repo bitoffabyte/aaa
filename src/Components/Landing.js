@@ -37,17 +37,7 @@ const Landing = ({ match }) => {
 				</CSSTransition>
 
 				{/* <CSSTransition in={true} timeout={800} classNames='logoAni'> */}
-				<img
-					src={img}
-					className={`${
-						history.location.pathname == "/signin" ||
-						history.location.pathname == "/"
-							? history.location.pathname == "/signin"
-								? "landingLogo logo2"
-								: "landingLogo"
-							: "logoGone"
-					}`}
-				/>
+				<img src={img} className='landingLogo ' />
 				{/* </CSSTransition> */}
 
 				<br />

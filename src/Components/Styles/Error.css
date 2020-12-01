@@ -1,25 +1,64 @@
+.lan {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80vw;
+	/* margin-left: 10%; */
+}
 .eer {
-	width: 995px;
-	height: 104px;
 	text-align: left;
-	font: normal normal 600 88px/104px Raleway;
-	letter-spacing: 0px;
+	/* font: normal normal 300 35px Raleway; */
+	font-family: Raleway;
 	color: #f8b652;
 	opacity: 1;
+	font-size: 8rem;
 }
 .err {
-	width: 694px;
-	height: 41px;
+	width: auto;
 	text-align: center;
-	font: normal normal 300 35px/41px Raleway;
+	/* font: normal normal 300 35px/41px Raleway; */
 	letter-spacing: 0.88px;
+	font-family: "Raleway";
+
 	color: #f8b652;
+	font-size: 4rem;
 }
 .errr {
-	width: 269px;
-	height: 41px;
 	text-align: center;
-	font: italic normal 300 35px/41px Raleway;
+	/* font: italic normal 300 35px/41px Raleway; */
 	letter-spacing: 0.88px;
+	font-family: "Raleway";
+
 	color: #f8b652;
+	font-size: 4rem;
+}
+.iimg {
+	width: 10vw;
+	height: auto;
+	min-width: 100px;
+}
+@media only screen and (max-width: 900px) {
+	.eer {
+		font-size: 2rem;
+	}
+	.err {
+		font-size: 1.5rem;
+	}
+	.errr {
+		font-size: 1.5rem;
+	}
+	.lan {
+		width: 100vw;
+		/* margin-left: 10%; */
+	}
+}
+
+@media only screen and (max-width: 700) {
+	.lan {
+		margin-left: 0%;
+	}
 }

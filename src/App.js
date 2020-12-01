@@ -2,9 +2,9 @@ import "./App.css";
 import Landing from "./Components/Landing";
 import Signin from "./Components/Signin";
 import Register from "./Components/Register";
-import Quiz from "./Components/Quiz";
 import Error from "./Components/Error";
 import Logo from "./Components/Logo";
+import Complete from "./Components/Complete";
 import { initialize } from "./firebase-codes";
 import { useRef, useEffect, useState } from "react";
 import {
@@ -28,14 +28,14 @@ function App() {
 					<Route path='/signin' exact>
 						<Signin />
 					</Route>
-					<Route path='/quiz'>
-						<Quiz />
-					</Route>
 					<Route path='/register'>
 						<Register />
 					</Route>
 					<Route path='/error'>
 						<Error />
+					</Route>
+					<Route path='/done'>
+						<Complete />
 					</Route>
 				</Switch>
 			</div>

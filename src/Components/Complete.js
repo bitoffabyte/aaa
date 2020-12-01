@@ -1,13 +1,13 @@
 import React from "react";
-import img from "../assets/err.svg";
+import img from "../assets/tick.svg";
 import "./Styles/Comp.css";
-const Error = () => {
+const Complete = () => {
 	return (
 		<div className='laaa'>
 			<div className='laad'>
 				<img src={img} className='iiimg' />
-				<div style={{ textAlign: "left" }}>
-					<span className='rc'>Error</span>
+				<div>
+					<span className='rc'>Registration Complete!!!</span>
 					<br />
 					<span className='ffd'>
 						For further details, please check your email.
@@ -17,4 +17,5 @@ const Error = () => {
 		</div>
 	);
 };
-export default Error;
+
+export default Complete;

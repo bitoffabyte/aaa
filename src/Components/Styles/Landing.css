@@ -1,18 +1,8 @@
-.landingLogo {
-	margin: auto;
-	text-align: center;
-	margin-top: -9%;
-	margin-bottom: -5%;
-	width: 70vw;
-	height: auto;
-	transition: all 800;
-	transition: margin 600ms;
-	opacity: 0;
-}
 .ccs {
 	text-align: center;
 	font: normal normal 500 98px/104px Raleway;
 	letter-spacing: 0px;
+	font-size: 8rem;
 	color: #f8b652;
 	opacity: 1;
 }
@@ -98,4 +88,14 @@
 	transform: translateY(-420px);
 
 	transition: all 800ms;
+}
+
+.landingLogo {
+	margin: auto;
+	text-align: center;
+	margin-top: -9%;
+	margin-bottom: -10%;
+	width: 50vw;
+	height: auto;
+	opacity: 0;
 }

@@ -1,0 +1,38 @@
+.rc {
+	font-size: 8rem;
+	color: #f8b652;
+	font-family: Raleway;
+}
+.ffd {
+	font-size: 4rem;
+	color: #f8b652;
+	font-family: Raleway;
+}
+
+.laaa {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100vw;
+	align-items: center;
+	text-align: center;
+}
+.laad {
+	display: flex;
+	margin: auto;
+	text-align: center;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+	.rc {
+		font-size: 2rem;
+	}
+	.ffd {
+		font-size: 1rem;
+	}
+	.iiimg {
+		width: 10vw;
+	}
+}
