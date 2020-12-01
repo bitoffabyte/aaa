@@ -4,7 +4,9 @@ import Signin from "./Components/Signin";
 import Register from "./Components/Register";
 import Quiz from "./Components/Quiz";
 import Error from "./Components/Error";
+import Logo from "./Components/Logo";
 import { initialize } from "./firebase-codes";
+import { useRef, useEffect, useState } from "react";
 import {
 	BrowserRouter as Router,
 	Route,
@@ -13,26 +15,30 @@ import {
 } from "react-router-dom";
 initialize();
 function App() {
-	const history = useHistory();
 	return (
 		<Router className='App'>
-			<Switch>
-				<Route path='/' exact>
-					<Landing />
-				</Route>
-				<Route path='/signin' exact>
-					<Signin />
-				</Route>
-				<Route path='/quiz'>
-					<Quiz />
-				</Route>
-				<Route path='/register'>
-					<Register />
-				</Route>
-				<Route path='/error'>
-					<Error />
-				</Route>
-			</Switch>
+			<Logo />
+			<div style={{ zIndex: 10 }}>
+				<Switch>
+					<Route path='/' exact key='path'>
+						{({ match }) => {
+							return <Landing match={match != null} />;
+						}}
+					</Route>
+					<Route path='/signin' exact>
+						<Signin />
+					</Route>
+					<Route path='/quiz'>
+						<Quiz />
+					</Route>
+					<Route path='/register'>
+						<Register />
+					</Route>
+					<Route path='/error'>
+						<Error />
+					</Route>
+				</Switch>
+			</div>
 		</Router>
 	);
 }

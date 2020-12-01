@@ -5,7 +5,7 @@ import firebase from "firebase";
 import { useHistory } from "react-router-dom";
 import { checkIfExists } from "./Checks";
 
-import "./Register.css";
+import "./Styles/Register.css";
 const Register = () => {
 	const history = useHistory();
 	if (firebase.auth().currentUser) {

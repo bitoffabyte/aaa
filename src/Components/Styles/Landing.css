@@ -7,44 +7,60 @@
 	height: auto;
 	transition: all 800;
 	transition: margin 600ms;
+	opacity: 0;
 }
 .ccs {
-	width: 40vw;
 	text-align: center;
-	font: normal normal 500 88px/104px Raleway;
+	font: normal normal 500 98px/104px Raleway;
 	letter-spacing: 0px;
 	color: #f8b652;
 	opacity: 1;
 }
 
 .dib {
+	position: relative;
 	width: 80vw;
 	margin: auto;
+	/* transform: translateY(-300%); */
 }
 .asd {
 	width: 100vw;
 	text-align: center;
-	padding-top: 13%;
+	z-index: 10;
+	height: 100vh;
 }
 .play {
-	margin-top: -10%;
+	position: relative;
 	z-index: 10;
 	cursor: pointer;
+	/* top: 60%; */
+	/* float: bottom; */
 }
-
-@media only screen and (max-width: 1500px) {
-	.landingLogo {
-		width: 90vw;
+.dsa {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+@media only screen and (max-width: 800px) {
+	.ccs {
+		/* display: none;
+		 */
+		font-size: 2em;
+		line-height: 2em;
 	}
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
 	.ccs {
 		width: 80vw;
 		text-align: center;
-		font: normal normal 500 50px Raleway;
+		font-size: 2rem;
 	}
-	.asd {
-		padding-top: 20vh;
+	.play {
+		/* top: 35%; */
+		transform: scale(0.8);
+	}
+	.dib {
+		/* top: 15%; */
 	}
 }
 /* Animations */

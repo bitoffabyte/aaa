@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import firebase from "firebase";
-import "./Signin.css";
+import "./Styles/Signin.css";
 import img from "../assets/robovitics.png";
 import { checkIfExists } from "./Checks";
 import img2 from "../assets/google.png";
@@ -29,7 +29,7 @@ const Signin = () => {
 		// 	timeout={1500}
 		// >
 		<div className='qwe'>
-			<img src={img} className='landingLogo' />
+			{/* <img src={img} className='landingLogo' /> */}
 			<br />
 			<img className='googleImg' src={img2} onClick={signIn} />
 			<br />
