@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Styles/Landing.css";
-import Signin from "./Signin";
 
 import img from "../assets/robovitics.png";
 import img2 from "../assets/play.svg";

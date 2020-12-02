@@ -5,7 +5,6 @@
 	opacity: 1;
 	cursor: pointer;
 	z-index: 10;
-	margin-top: 20%;
 }
 .vitE {
 	top: 693px;
@@ -50,15 +49,15 @@
 	height: auto;
 	transition: all 800;
 	transition: margin 600ms;
+	opacity: 1;
 }
 
 .qwe {
 	text-align: center;
-	left: 50%;
 	position: absolute;
-	transform: translateX(-50%);
 	top: 50%;
-	z-index: 10;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 1500px) {
@@ -66,7 +65,7 @@
 		width: 90vw;
 	}
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
 	.googleImg {
 		width: 80%;
 	}

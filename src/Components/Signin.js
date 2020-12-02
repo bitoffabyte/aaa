@@ -29,6 +29,7 @@ const Signin = () => {
 	return (
 		<CSSTransition in={a} unmountOnExit classNames='signIn' timeout={500}>
 			<div className='qwe'>
+				<img src={img} className='landingLogo' />
 				{/* <img src={img} className='landingLogo' /> */}
 				<br />
 				<img className='googleImg' src={img2} onClick={signIn} />
@@ -38,5 +39,4 @@ const Signin = () => {
 		</CSSTransition>
 	);
 };
-
 export default Signin;

@@ -85,19 +85,19 @@
 .er {
 	border-color: red;
 }
-.reg {
+.abc {
 	position: absolute;
+	height: 50vh;
+	width: auto;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
-}
-.abc {
-	display: inline-block;
-	text-align: left;
+	transform: translate(-50%, -25vh);
 }
 @media only screen and (max-width: 700px) {
 	.abc {
 		text-align: center;
+		width: 80vw;
+		height: auto;
 	}
 	.head1 {
 		font: normal normal normal 50px Raleway;

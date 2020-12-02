@@ -26,7 +26,7 @@ function App() {
 					</Route>
 					<Route path='/signin' exact>
 						<Signin />
-						<Logo />
+						{/* <Logo /> */}
 					</Route>
 					<Route path='/register'>
 						<Register />
