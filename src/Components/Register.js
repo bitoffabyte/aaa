@@ -17,7 +17,7 @@ const Register = () => {
 	const [phck, updatePhck] = useState(true);
 	const [rgck, updatergck] = useState(true);
 	const [reck, updatereck] = useState(true);
-	const [suc, updateSuc] = useState(false);
+	const [suc, updateSuc] = useState(true);
 	// This is initiall false to see reg form make it false until backend is done
 	// once backend is done add useState(false)
 
@@ -100,9 +100,13 @@ const Register = () => {
 				reason,
 			};
 			console.log("post", det);
-			$.post("http://ccs-robovitics.herokuapp.com/register", det, (data, err) => {
-				window.location.replace('/done');
-			});
+			$.post(
+				"http://ccs-robovitics.herokuapp.com/register",
+				det,
+				(data, err) => {
+					window.location.replace("/done");
+				}
+			);
 			// post req
 			// once a 200 res is recieved
 			// updateSuc(true);
