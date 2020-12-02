@@ -34,7 +34,7 @@ function App() {
 					<Route path='/error'>
 						<Error
 							a='Error'
-							b='Please sign in with VIT email ID ending in @vitstudent.ac.in'
+							b='Contact Saahil-9898056388 (Check if you have used VIT email ID ending in @vitstudent.ac.in to sign in)'
 						/>
 					</Route>
 					<Route path='/done'>

@@ -79,7 +79,7 @@ const Register = () => {
 			updatereck(true);
 		}
 		if (
-			!phno.current.value.length !== 10 &&
+			phno.current.value.length === 10 &&
 			/^\d+$/.test(phno.current.value) &&
 			reg.current.value.length === 9 &&
 			/20[A-Z][A-Z][A-Z]\d\d\d\d/.test(reg.current.value.toUpperCase()) &&
@@ -102,6 +102,12 @@ const Register = () => {
 			console.log("post", det);
 			$.post("http://127.0.0.1:5000/register", det, (data, err) => {
 				console.log(data);
+				if(err) {
+					window.location.replace('/error');
+				}
+				else {
+					window.location.replace('/done');
+				}
 			});
 			// post req
 			// once a 200 res is recieved
