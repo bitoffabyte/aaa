@@ -100,14 +100,8 @@ const Register = () => {
 				reason,
 			};
 			console.log("post", det);
-			$.post("http://127.0.0.1:5000/register", det, (data, err) => {
-				console.log(data);
-				if(err) {
-					window.location.replace('/error');
-				}
-				else {
-					window.location.replace('/done');
-				}
+			$.post("http://ccs-robovitics.herokuapp.com/register", det, (data, err) => {
+				window.location.replace('/done');
 			});
 			// post req
 			// once a 200 res is recieved
