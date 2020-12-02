@@ -79,7 +79,7 @@ const Register = () => {
 			updatereck(true);
 		}
 		if (
-			!phno.current.value.length !== 10 &&
+			phno.current.value.length === 10 &&
 			/^\d+$/.test(phno.current.value) &&
 			reg.current.value.length === 9 &&
 			/20[A-Z][A-Z][A-Z]\d\d\d\d/.test(reg.current.value.toUpperCase()) &&
@@ -100,8 +100,8 @@ const Register = () => {
 				reason,
 			};
 			console.log("post", det);
-			$.post("http://127.0.0.1:5000/register", det, (data, err) => {
-				console.log(data);
+			$.post("http://ccs-robovitics.herokuapp.com/register", det, (data, err) => {
+				window.location.replace('/done');
 			});
 			// post req
 			// once a 200 res is recieved
